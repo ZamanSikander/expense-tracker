@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<style>
+    .main-1{
+        border: 2px solid red;
+        box-sizing: border-box;
+        max-width: 80%;
+        margin: 0 auto;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+</style>
+<body>
+    <main class="main-1">
+
+        <form id="expense-form" action="" method="get" onsubmit="event.preventDefault(); add_expense();">
+            <label for="expense-name">Enter expense-name:</label>
+            <input type="text" id="expense-name" name="expense-name">
+            <label for="expense">Enter expense-amount</label>
+            <input type="number" id="expense" name="expense">
+            <button class="btn1" type="submit" onsubmit="add_expense()">Add expenses</button>
+            <button class="btn2" type="button" onclick="remove_expense()">Clear all expenses</button>
+        </form>
+        <ul id="expense-list"></ul>
+        <p>Total Expenses: <span id="totalExpense">0</span></p>
+    </main>
+
+</body>
+
+</html>
